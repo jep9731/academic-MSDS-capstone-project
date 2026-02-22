@@ -167,7 +167,7 @@ For questions or collaboration inquiries, please reach out to the project team v
 
 | Team Member | Email |
 |---|---|
-| `Name` | `email@university.edu` |
+| `Joshua Pasaye` | `joshuapasaye2027@u.northwestern.edu` |
 
 ---
 
