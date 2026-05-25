@@ -225,7 +225,7 @@ patient_export.to_csv("processed/patient_data.csv", index=False)
 │
 ├── 📁 dashboards/
 │   ├── healthcare_dashboard.pbix     # Power BI dashboard
-│   └── exports/                      # CSV exports for dashboard
+│   └── healthcare_dashboard.pdf      # PDF of dashboard
 │
 ├── 📁 reports/
 │   ├── executive_summary.pdf
