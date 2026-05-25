@@ -1,0 +1,118 @@
+Feature,Importance,Model
+Age,0.1226,Random Forest
+Admission Month,0.0669,Random Forest
+Admission DOW,0.0659,Random Forest
+Admission Year,0.0641,Random Forest
+Age_Group_encoded,0.056,Random Forest
+Medical Condition_Obesity,0.0407,Random Forest
+Medical Condition_Diabetes,0.0405,Random Forest
+Medical Condition_Cancer,0.0376,Random Forest
+Medical Condition_Hypertension,0.0369,Random Forest
+Medical Condition_Arthritis,0.0344,Random Forest
+Medical Condition_Asthma,0.0336,Random Forest
+Admission Type_Emergency,0.0203,Random Forest
+Gender_Female,0.0165,Random Forest
+Gender_Male,0.0165,Random Forest
+Insurance Provider_Cigna,0.0159,Random Forest
+Insurance Provider_Medicare,0.0159,Random Forest
+Insurance Provider_UnitedHealthcare,0.0158,Random Forest
+Insurance Provider_Blue Cross,0.0158,Random Forest
+Medication_Paracetamol,0.0157,Random Forest
+Insurance Provider_Aetna,0.0157,Random Forest
+Medication_Aspirin,0.0156,Random Forest
+Medication_Lipitor,0.0156,Random Forest
+Medication_Penicillin,0.0154,Random Forest
+Medication_Ibuprofen,0.0152,Random Forest
+Admission Weekend,0.0142,Random Forest
+Blood Type_B-,0.0136,Random Forest
+Blood Type_AB-,0.0131,Random Forest
+Blood Type_O+,0.0131,Random Forest
+Blood Type_AB+,0.013,Random Forest
+Blood Type_A+,0.013,Random Forest
+Blood Type_A-,0.013,Random Forest
+Season_Summer,0.0129,Random Forest
+Season_Winter,0.0123,Random Forest
+Admission Type_Urgent,0.0123,Random Forest
+Blood Type_B+,0.0123,Random Forest
+Blood Type_O-,0.0122,Random Forest
+Season_Spring,0.0121,Random Forest
+Admission Type_Elective,0.012,Random Forest
+Season_Fall,0.0117,Random Forest
+Medical Condition_Asthma,0.37290000915527344,XGBoost
+Medical Condition_Arthritis,0.27090001106262207,XGBoost
+Medical Condition_Hypertension,0.17489999532699585,XGBoost
+Admission Type_Emergency,0.030799999833106995,XGBoost
+Medical Condition_Cancer,0.02710000053048134,XGBoost
+Medical Condition_Obesity,0.02539999969303608,XGBoost
+Medical Condition_Diabetes,0.013799999840557575,XGBoost
+Age,0.010300000198185444,XGBoost
+Season_Fall,0.0034000000450760126,XGBoost
+Insurance Provider_Aetna,0.0031999999191612005,XGBoost
+Blood Type_B-,0.003100000089034438,XGBoost
+Blood Type_A-,0.003100000089034438,XGBoost
+Medication_Lipitor,0.003000000026077032,XGBoost
+Blood Type_AB-,0.002899999963119626,XGBoost
+Admission Type_Elective,0.002899999963119626,XGBoost
+Blood Type_AB+,0.002899999963119626,XGBoost
+Insurance Provider_Medicare,0.00279999990016222,XGBoost
+Blood Type_B+,0.00279999990016222,XGBoost
+Admission Year,0.0027000000700354576,XGBoost
+Insurance Provider_Blue Cross,0.0026000000070780516,XGBoost
+Admission DOW,0.0026000000070780516,XGBoost
+Medication_Paracetamol,0.0026000000070780516,XGBoost
+Blood Type_A+,0.0026000000070780516,XGBoost
+Insurance Provider_UnitedHealthcare,0.0026000000070780516,XGBoost
+Insurance Provider_Cigna,0.0026000000070780516,XGBoost
+Admission Month,0.0026000000070780516,XGBoost
+Gender_Female,0.0024999999441206455,XGBoost
+Medication_Penicillin,0.002400000113993883,XGBoost
+Medication_Aspirin,0.002400000113993883,XGBoost
+Admission Type_Urgent,0.002400000113993883,XGBoost
+Blood Type_O+,0.002300000051036477,XGBoost
+Season_Summer,0.002300000051036477,XGBoost
+Season_Spring,0.002300000051036477,XGBoost
+Season_Winter,0.002199999988079071,XGBoost
+Medication_Ibuprofen,0.002199999988079071,XGBoost
+Blood Type_O-,0.002099999925121665,XGBoost
+Admission Weekend,0.0,XGBoost
+Gender_Male,0.0,XGBoost
+Age_Group_encoded,0.0,XGBoost
+Medical Condition_Diabetes,0.4027,Logistic Regression
+Medical Condition_Obesity,0.3981,Logistic Regression
+Medical Condition_Cancer,0.383,Logistic Regression
+Admission Type_Emergency,0.2679,Logistic Regression
+Age,0.1555,Logistic Regression
+Age_Group_encoded,0.1487,Logistic Regression
+Blood Type_O-,0.0167,Logistic Regression
+Medication_Penicillin,0.0132,Logistic Regression
+Insurance Provider_UnitedHealthcare,0.0116,Logistic Regression
+Blood Type_A+,0.0104,Logistic Regression
+Blood Type_B+,0.0099,Logistic Regression
+Medication_Ibuprofen,0.0097,Logistic Regression
+Insurance Provider_Cigna,0.0087,Logistic Regression
+Season_Summer,0.0084,Logistic Regression
+Gender_Female,0.006,Logistic Regression
+Season_Fall,0.0058,Logistic Regression
+Admission Weekend,0.0032,Logistic Regression
+Medication_Paracetamol,0.0019,Logistic Regression
+Medication_Aspirin,0.0024,Logistic Regression
+Insurance Provider_Medicare,0.0029,Logistic Regression
+Blood Type_AB+,0.004,Logistic Regression
+Blood Type_A-,0.004,Logistic Regression
+Blood Type_AB-,0.0047,Logistic Regression
+Admission DOW,0.0059,Logistic Regression
+Gender_Male,0.006,Logistic Regression
+Season_Winter,0.0065,Logistic Regression
+Season_Spring,0.0079,Logistic Regression
+Insurance Provider_Blue Cross,0.0086,Logistic Regression
+Insurance Provider_Aetna,0.0089,Logistic Regression
+Blood Type_B-,0.0096,Logistic Regression
+Admission Month,0.0116,Logistic Regression
+Blood Type_O+,0.0146,Logistic Regression
+Admission Year,0.0185,Logistic Regression
+Medication_Lipitor,0.0225,Logistic Regression
+Admission Type_Urgent,0.1313,Logistic Regression
+Admission Type_Elective,0.1352,Logistic Regression
+Medical Condition_Asthma,0.3888,Logistic Regression
+Medical Condition_Arthritis,0.3921,Logistic Regression
+Medical Condition_Hypertension,0.4061,Logistic Regression
