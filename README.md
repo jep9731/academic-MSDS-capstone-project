@@ -1,174 +1,396 @@
-# 🎓 MSDS Capstone Project
+# 🎓 Healthcare Predictive Analytics — MSDS Capstone
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Program](https://img.shields.io/badge/Program-MSDS-blue)
 ![Section](https://img.shields.io/badge/Section-55-orange)
+![Dashboard](https://img.shields.io/badge/Dashboard-Power%20BI-yellow)
 
-> **Master of Science in Data Science — Capstone Course**
-> 
-> A culminating project demonstrating business strategy, data modeling, and technical implementation across a real-world use case.
+> **Master of Science in Data Science — Northwestern University**
+>
+> A comprehensive healthcare analytics capstone project focused on predictive modeling, patient risk classification, hospital billing analysis, and interactive Power BI dashboard development.
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This repository contains the full deliverables for our MSDS Capstone project, completed as part of the final capstone requirement for the Master of Science in Data Science program. The project integrates skills across the three core pillars of the MSDS curriculum:
+This repository contains the final deliverables for our MSDS Capstone project, developed as part of the Northwestern University Master of Science in Data Science program.
 
-| Pillar | Focus Areas |
+The project combines healthcare analytics, machine learning, financial analysis, and business intelligence to analyze hospital patient data and generate actionable operational insights.
+
+The solution integrates:
+
+- Predictive analytics for hospital billing estimation
+- Patient risk classification modeling
+- Exploratory healthcare data analysis
+- Financial and operational reporting
+- Interactive Power BI dashboards
+- Automated dashboard-ready export pipelines
+
+---
+
+# 🏥 Business Problem
+
+Healthcare organizations face increasing pressure to:
+
+- Reduce operational costs
+- Improve patient outcomes
+- Identify high-risk patient populations
+- Optimize hospital resource allocation
+- Better understand healthcare billing drivers
+
+This project addresses these challenges by analyzing patient admission, medical condition, demographic, and billing data to generate predictive and operational insights.
+
+## Strategic Objectives
+
+- Predict hospital billing amounts
+- Classify patients into risk categories
+- Analyze billing trends across medical conditions
+- Understand operational drivers of hospital costs
+- Deliver executive-ready dashboards for decision-making
+
+---
+
+# 🤖 Analytics & Modeling Objectives
+
+The capstone contains two primary analytics initiatives:
+
+## 1. Predict Hospital Billing Amount
+
+Machine learning models are used to estimate patient billing amounts based on:
+
+- Admission type
+- Medical condition
+- Length of stay
+- Demographics
+- Insurance provider
+- Medication and test results
+
+## 2. Patient Risk Classification
+
+Classification models identify high-risk patient groups using engineered healthcare features and operational indicators.
+
+Risk classification supports:
+
+- Early intervention planning
+- Resource prioritization
+- Operational forecasting
+- Cost management
+
+---
+
+# 📊 Power BI Dashboard
+
+The project includes a multi-page Power BI dashboard built using exported datasets generated directly from the notebook pipeline.
+
+## Dashboard Features
+
+### Executive KPI Overview
+
+Key metrics include:
+
+| KPI | Value |
 |---|---|
-| 📊 **Business** | Strategic thinking, consulting, stakeholder communication, business planning |
-| 🤖 **Modeling** | Statistical analysis, machine learning, model evaluation, and insights |
-| 💻 **Information Technology** | Data pipelines, system design, implementation, and deployment |
+| Average Billing | ~$26K |
+| Median Billing | ~$26K |
+| Total Patients | ~55K |
+| Average Length of Stay | 15.5 Days |
+| High Risk Rate | 49.2% |
+| High Risk Count | ~27K |
 
 ---
 
-## 🏢 Business Case
+## Billing Analytics
 
-> _Briefly describe the industry, problem statement, and business context here._
+Visualizations include:
 
-- **Industry:** `[e.g., Healthcare / Finance / Retail / etc.]`
-- **Problem Statement:** `[1–2 sentences describing the core business problem]`
-- **Strategic Objective:** `[What competitive or operational advantage does this project deliver?]`
+- Average billing by medical condition
+- Billing distribution analysis
+- Billing comparison by admission type
+- Length of stay vs. billing relationships
+- Billing heatmaps by condition and admission type
 
----
+### Key Findings
 
-## 👥 Team Members
-
-| Name | Role |
-|---|---|
-| `Name` | Project Lead / Business Strategy |
-| `Name` | Data Engineer / Pipeline Development |
-| `Name` | ML Modeling & Evaluation |
-| `Name` | Visualization & Communication |
+- Obesity and diabetes patients had the highest average billing amounts
+- Emergency admissions consistently produced higher operational risk
+- Billing increases correlated with longer patient stays
 
 ---
 
-## 🗂️ Repository Structure
+## Risk Classification Analytics
 
+Dashboard pages analyze:
+
+- Risk distribution across age groups
+- High-risk patient counts
+- Billing premium for high-risk populations
+- Average stay duration by risk level
+- Risk score comparison by admission type
+
+### Key Findings
+
+- High-risk patients incurred approximately **$3K higher billing costs**
+- High-risk patients averaged significantly longer hospital stays
+- Emergency admissions produced the highest average risk scores
+- Older age groups showed elevated operational risk patterns
+
+---
+
+# 📓 Notebook Workflow
+
+The primary notebook powering the project is:
+
+```text
+Capstone_Final.ipynb
 ```
-📦 capstone-project/
+
+The notebook contains:
+
+1. Dependency installation
+2. Configuration setup
+3. Data loading and preprocessing
+4. Exploratory Data Analysis (EDA)
+5. Financial analysis
+6. Billing amount prediction
+7. Patient risk classification
+8. Power BI export generation
+9. Dashboard embedding support
+
+---
+
+# 🧪 Data Science Workflow
+
+## 1. Data Acquisition
+
+The dataset is downloaded and loaded using KaggleHub.
+
+## 2. Data Cleaning & Engineering
+
+Feature engineering includes:
+
+- Length of stay calculations
+- Date transformations
+- Categorical encoding
+- Risk score generation
+- Operational feature creation
+
+## 3. Exploratory Data Analysis
+
+EDA identifies:
+
+- Billing trends
+- Admission behavior
+- Patient demographics
+- Medical condition distributions
+- Operational patterns
+
+## 4. Machine Learning Modeling
+
+The project develops:
+
+- Regression models for billing prediction
+- Classification models for patient risk
+
+Technologies include:
+
+- Scikit-learn
+- XGBoost
+- Pandas
+- NumPy
+
+## 5. Dashboard Export Pipeline
+
+Processed datasets are exported to CSV for direct Power BI integration.
+
+Example export workflow:
+
+```python
+billing_export.to_csv("processed/billing_metrics.csv", index=False)
+risk_export.to_csv("processed/risk_metrics.csv", index=False)
+patient_export.to_csv("processed/patient_data.csv", index=False)
+```
+
+---
+
+# 🗂️ Repository Structure
+
+```text
+📦 healthcare-capstone/
 ├── 📁 data/
-│   ├── raw/                  # Original, unmodified data sources
-│   ├── processed/            # Cleaned and transformed datasets
-│   └── external/             # Third-party or supplementary data
+│   ├── raw/                          # Original healthcare datasets
+│   └── processed/                    # Dashboard-ready exports
+│
 ├── 📁 notebooks/
-│   ├── 01_eda.ipynb          # Exploratory Data Analysis
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_modeling.ipynb
-│   └── 04_evaluation.ipynb
-├── 📁 src/
-│   ├── data/                 # Data ingestion and processing scripts
-│   ├── models/               # Model training and inference code
-│   └── utils/                # Helper functions and utilities
+│   └── Capstone_Final.ipynb          # Main capstone notebook
+│
+├── 📁 dashboards/
+│   ├── healthcare_dashboard.pbix     # Power BI dashboard
+│   └── exports/                      # CSV exports for dashboard
+│
 ├── 📁 reports/
-│   ├── business_plan.pdf     # Business case and strategic plan
-│   ├── implementation_plan.pdf
+│   ├── executive_summary.pdf
+|   ├── final_report.pdf
 │   └── final_presentation.pdf
-├── 📁 dashboards/            # Visualization and reporting artifacts
+│
 ├── requirements.txt
-├── environment.yml
 └── README.md
 ```
 
 ---
 
-## 🔬 Methodology
-
-1. **Business Understanding** — Defined the problem scope, KPIs, and success criteria in collaboration with stakeholders.
-2. **Data Acquisition & Engineering** — Identified, collected, and built pipelines for all relevant data sources.
-3. **Exploratory Data Analysis** — Uncovered patterns, anomalies, and key relationships within the data.
-4. **Modeling** — Developed, trained, and iterated on predictive/analytical models.
-5. **Evaluation** — Assessed model performance against business-defined success metrics.
-6. **Implementation Planning** — Outlined a deployment strategy, organizational considerations, and scalability roadmap.
-7. **Communication** — Delivered findings to both technical and non-technical audiences.
-
----
-
-## 📈 Key Results
-
-> _Summarize your primary findings and outcomes here._
-
-- `[Result 1 — e.g., Achieved XX% accuracy on holdout set]`
-- `[Result 2 — e.g., Identified $XM in potential cost savings]`
-- `[Result 3 — e.g., Reduced processing time by XX%]`
-
----
-
-## 🛠️ Tech Stack
+# 🛠️ Technology Stack
 
 | Category | Tools |
 |---|---|
-| **Languages** | Python, SQL |
-| **Data Processing** | Pandas, NumPy, PySpark |
-| **Modeling** | Scikit-learn, XGBoost, TensorFlow / PyTorch |
-| **Visualization** | Matplotlib, Seaborn, Plotly, Tableau |
-| **Infrastructure** | AWS / GCP / Azure, Docker |
+| **Programming Languages** | Python, SQL |
+| **Data Processing** | Pandas, NumPy |
+| **Machine Learning** | Scikit-learn, XGBoost |
+| **Visualization** | Power BI, Plotly, Matplotlib, Seaborn |
+| **Notebook Environment** | Jupyter Notebook, Google Colab |
+| **Data Source Management** | KaggleHub |
 | **Version Control** | Git, GitHub |
 
 ---
 
-## ⚙️ Getting Started
+# ⚙️ Getting Started
 
-### Prerequisites
+## Prerequisites
 
 - Python 3.9+
+- Jupyter Notebook or Google Colab
+- Power BI Desktop
 - Conda or virtualenv
 
-### Installation
+---
+
+# 🔧 Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-org/capstone-project.git
-cd capstone-project
+# Clone repository
+git clone https://github.com/your-org/healthcare-capstone.git
 
-# Create and activate environment
+cd healthcare-capstone
+
+# Create environment
 conda env create -f environment.yml
+
+# Activate environment
 conda activate capstone
 
-# Or using pip
+# Or install manually
 pip install -r requirements.txt
 ```
 
-### Running the Project
+---
+
+# ▶️ Running the Project
+
+## Launch the Notebook
 
 ```bash
-# Run data preprocessing
-python src/data/preprocess.py
-
-# Train the model
-python src/models/train.py
-
-# Launch the dashboard (if applicable)
-python dashboards/app.py
+jupyter notebook notebooks/Capstone_Final.ipynb
 ```
 
+## Execute the Pipeline
+
+Run notebook cells sequentially to:
+
+- Load healthcare data
+- Train models
+- Generate KPIs
+- Export Power BI datasets
+
+## Open the Dashboard
+
+```text
+dashboards/healthcare_dashboard.pbix
+```
+
+Open the `.pbix` file using Power BI Desktop.
+
 ---
 
-## 📄 Deliverables
+# 📈 Key Results
 
-- [ ] Business Plan
-- [ ] Project Implementation Plan
-- [ ] Exploratory Data Analysis Report
-- [ ] Model Documentation
-- [ ] Final Presentation Deck
-- [ ] Executive Summary
+| Result | Outcome |
+|---|---|
+| High Risk Patient Rate | 49.2% |
+| Average Billing | ~$26K |
+| Billing Premium for High Risk Patients | ~$3K |
+| Average Length of Stay | 15.5 Days |
+| Total Patients Analyzed | ~55K |
+
+Additional insights:
+
+- Emergency admissions generated the highest operational risk scores
+- Longer hospital stays strongly correlated with increased billing amounts
+- Medical condition categories showed measurable cost variability
+- High-risk patients required greater healthcare resource utilization
 
 ---
 
-## 🙏 Acknowledgments
+# 📄 Deliverables
 
-We would like to thank our course instructors, program faculty, and any industry partners or mentors who supported this project throughout the MSDS Capstone course (Section 55).
+- [x] Exploratory Data Analysis
+- [x] Financial Analytics
+- [x] Billing Prediction Models
+- [x] Patient Risk Classification Models
+- [x] Power BI Dashboard
+- [x] Dashboard Export Pipeline
+- [x] Final Presentation
+- [x] Executive Reporting Visualizations
 
 ---
 
-## 📬 Contact
+# 👥 Team Members
 
-For questions or collaboration inquiries, please reach out to the project team via GitHub Issues or the contact information below.
+| Name | Role |
+|---|---|
+| `Joshua Pasaye` | Patient Risk Model Development / Dashboard Development |
+| `Liam Reardon` | Data Analyst / Mobile App Development |
+| `Ryan Hong` | Financial Analyst / Project Manager |
+| `James Kwok` | Cost Optimization Model Development / Chatbot Integretation |
+| `Eric Mallmann` | Chatbot Integration / Dashboard Development
+| `Wildcats Analytics Partners` | MSDS Capstone Team |
+
+---
+
+# 🙏 Acknowledgments
+
+We would like to thank the Northwestern University MSDS faculty, instructors, mentors, and peers who supported this capstone project.
+
+Special thanks to the healthcare analytics and machine learning coursework that contributed to the successful implementation of this project.
+
+---
+
+# 📬 Contact
+
+For questions or collaboration opportunities:
 
 | Team Member | Email |
 |---|---|
 | `Joshua Pasaye` | `joshuapasaye2027@u.northwestern.edu` |
+| `Liam Reardon` | `liamreardon2026@u.northwestern.edu` |
+| `James Kwok` | `kameskwok2027@u.northwestern.edu` |
+| `Ryan Hong` | `ryanhong2026@u.northwestern.edu` |
+| `Eric Mallmann` | `ericmallmann2024@u.northwestern.edu` |
 
 ---
 
-*This project was completed in partial fulfillment of the requirements for the Master of Science in Data Science program.*
+# 🚀 Future Enhancements
+
+Potential future improvements include:
+
+- Real-time healthcare dashboard integration
+- Cloud deployment architecture
+- Automated ETL scheduling
+- Advanced predictive forecasting
+- Deep learning risk classification
+- HIPAA-compliant deployment pipelines
+- Real-time hospital monitoring systems
+
+---
+
+*This project was completed in partial fulfillment of the requirements for the Master of Science in Data Science program at Northwestern University.*
+
+
